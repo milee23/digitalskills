@@ -1,0 +1,251 @@
+/* GENERAL LAYOUT STYLES ============================== */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    color: #333;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* NOTE: this was commented out for the flexslider below */
+/* .image-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+} */
+
+/* TYPOGRAPHY ============================== */
+
+h1 {
+    font-size: 36px;
+}
+
+h1,
+h2 {
+    font-weight: bold;
+}
+
+
+/* NAV ============================== */
+
+nav {
+    background: white;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+    opacity: 1;
+    top: 0;
+}
+
+@media (max-width: 650px){
+  nav {
+      justify-content: flex-start;
+  }
+}
+
+nav ul {
+    list-style-type: none;
+    padding-right: 30px;
+    text-align: center;
+    margin: 0;
+    top: 0;
+}
+
+nav li {
+    display: inline-block;
+    padding: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav a:hover {
+    border-bottom: 1px solid #ffd202;
+    opacity: 0.5;
+}
+
+
+/* HEADER ============================== */
+
+header {
+    text-align: center;
+    background: #9A9DA1;
+    color: white;
+    padding: 100px;
+    margin-top: 100px;
+}
+
+header h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.logo {
+    width: 100%;
+}
+
+
+/* ABOUT - SECTION ============================== */
+
+.about {
+    background: white;
+    text-align: center;
+    padding: 150px;
+}
+
+.about p {
+    text-align: left;
+}
+
+.profileimg {
+  width: 100%;
+}
+
+/* PORTFOLIO - SECTION ============================== */
+
+.portfolio {
+  background: #9A9DA1;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+}
+
+.pic {
+    width: 450px;
+    padding: 10px;
+    opacity: 0.5;
+}
+
+.pic:hover {
+  opacity: 1;
+}
+
+/* RESUME - SECTION ============================== */
+
+.resume {
+    background: white;
+    text-align: center;
+    padding: 150px;
+}
+
+
+/* SOCIAL - SECTION ==================== */
+
+.social ul {
+    list-style-type: none;
+    text-align: center;
+    background: #333;
+    padding: 50px;
+    margin-bottom: 0;
+}
+
+.social ul li {
+    display: inline-block;
+}
+
+.fa {
+    font-size: 50px;
+    color: #E4E8ED;
+    margin: 10px;
+}
+
+.fa:hover {
+    color: #8EC5FF;
+}
+
+
+/* FOOTER ============================== */
+
+footer {
+    background: #9A9DA1;
+    text-align: center;
+    color: white;
+    padding: 50px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/*===============RESPONSIVE STYLES==========================*/
+
+@media (max-width: 960px) {
+    .wrapper {
+        padding: 1% 10%;
+    }
+    header h1 {
+        font-size: 18px;
+    }
+}
+
+.hamburger,
+.close {
+    display: none;
+}
+
+@media (max-width: 650px) {
+    .hamburger,
+    .close {
+        display: flex;
+        font-size: 24px;
+        font-family: "Lucida Sans Unicode", "Arial Unicode MS";
+    }
+    .hamburger{
+      margin-left: 20px;
+    }
+    ul.main-nav {
+        top: -100vh;
+        margin-top: 0;
+        position: fixed;
+        right: 10px;
+    }
+    ul.main-nav li {
+        display: flex;
+        text-align: center;
+        font-size: 24px;
+    }
+    .main-nav.open-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 2% 10%;
+        z-index: 2;
+        background: #9A9DA1;
+        width: 100%;
+        height: 100vh;
+    }
+    .open-nav a {
+        color: white;
+    }
+    .about {
+        padding: 10px;
+    }
+    nav {
+        text-align: center;
+    }
+}
